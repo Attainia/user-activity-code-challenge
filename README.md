@@ -1,5 +1,7 @@
 # user-activity-code-challenge
 
+look at https://github.com/Lmcmaaser/user-activity-code-challenge
+
 ## Project setup
 ```
 npm install
