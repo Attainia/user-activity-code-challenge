@@ -10,6 +10,11 @@ Frontend Ideas:
 
 //insert function that will change login_count (of 0 for Table 1; greater than or equal to 1 for Table 2) background color //on button click event, execute if then statement and toggle class //use v-bind:style= ?
 
+BackendIdeas: 
+// https://github.com/Lmcmaaser/movieapi 
+// create tables (users, loggedIn, noLogin) in DRF 
+//create python script that prompts for filename (users.json) parse file inserts or ignores data to database
+
 ## Project setup
 ```
 npm install
