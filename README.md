@@ -1,6 +1,7 @@
 # user-activity-code-challenge
-
-look at https://github.com/Lmcmaaser/user-activity-code-challenge
+I originally created these apps in separate files:
+ https://github.com/Lmcmaaser/user-activity-code-challenge
+ https://github.com/Lmcmaaser/userapi
 
 ## Project setup
 ```
