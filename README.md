@@ -1,4 +1,5 @@
 ## Usage Instructions
 
-## Architectural Considerations
+## Architectural Overview
 
+## Further Considerations
