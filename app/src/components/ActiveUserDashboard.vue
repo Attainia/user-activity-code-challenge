@@ -17,7 +17,9 @@
         <td>{{user.project_count}}</td>
       </tr>
     </table>
-    <button v-on:click="toggleActiveUserHighlight">Highlight Active Users</button>
+    <div class="button" v-on:click="toggleActiveUserHighlight">
+      {{areActiveUsersHighlighted ? 'Unhighlight' : 'Highlight'}} Active Users
+    </div>
   </div>
 </template>
 
@@ -73,4 +75,19 @@ td, th {
 .highlighted {
   background-color: #00FF00;
 }
+
+.button {
+  border: 2px solid black;
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #DDD;
+}
+
 </style>
