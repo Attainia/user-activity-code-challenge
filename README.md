@@ -50,7 +50,9 @@ become untenable in a more complex API. Between the second and third approach, I
 because fixtures are better suited for parsing JSON files generated from database exports and it seemed inelegant to
 modify the provided data to emulate that format.
 
-Filtering by user activity is supported via the query parameter `active=true` or `active=false`.
+I left the debug setting enabled for easier debugging but would disable it in any production environment. Furthermore,
+filtering by user activity is supported via the query parameter `active=true` or `active=false`. In a project of
+a large scope I would extend this functionality to allow filtering with a numeric range and via other user properties.
 
 ## Frontend
 As noted in the Usage Instructions, I decided to consume the Django API in order to retrieve the user data in the
