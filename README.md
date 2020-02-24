@@ -7,7 +7,7 @@ git clone https://github.com/PatrickJFierro/user-activity-code-challenge
 cd user-activity-code-challenge
 source env/bin/activate
 python api/manage.py runserver&
-npm run --prefix app dev&
+npm run --prefix app dev
 ```
 
 # Architectural Overview
