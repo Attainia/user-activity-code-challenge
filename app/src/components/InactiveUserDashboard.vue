@@ -17,7 +17,9 @@
         <td>{{user.project_count}}</td>
       </tr>
     </table>
-    <button v-on:click="toggleActiveUserHighlight">Highlight Inactive Users</button>
+    <div class="button" v-on:click="toggleInactiveUserHighlight">
+      {{areInactiveUsersHighlighted ? 'Unhighlight' : 'Highlight'}} Inactive Users
+    </div>
   </div>
 </template>
 
@@ -30,16 +32,16 @@ export default {
   data () {
     return {
       users: [],
-      areActiveUsersHighlighted: false
+      areInactiveUsersHighlighted: false
     }
   },
   methods: {
-    toggleActiveUserHighlight: function (event) {
-      this.areActiveUsersHighlighted = !this.areActiveUsersHighlighted
+    toggleInactiveUserHighlight: function (event) {
+      this.areInactiveUsersHighlighted = !this.areInactiveUsersHighlighted
     },
     generateUserHighlightClass: function (user) {
-      var isUserActive = user.login_count === 0
-      return isUserActive && this.areActiveUsersHighlighted ? 'highlighted' : ''
+      var isUserActive = user.login_count > 0
+      return !isUserActive && this.areInactiveUsersHighlighted ? 'highlighted' : ''
     }
   },
   mounted () {
@@ -72,5 +74,19 @@ td, th {
 
 .highlighted {
   background-color: #FF4600;
+}
+
+.button {
+  border: 2px solid black;
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #DDD;
 }
 </style>
