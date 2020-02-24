@@ -18,7 +18,6 @@ def insert_user(apps, schema_editor):
             login_count = entry['login_count'],
             project_count = entry['project_count']
         )
-        print(user_model)
         user_model.save()
 
 class Migration(migrations.Migration):
