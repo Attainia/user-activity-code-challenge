@@ -17,11 +17,19 @@ of use but if you would rather serve the API natively it uses the following pack
 * djangorestframework
 * django-cors-headers
 
-Additionally, the frontend dependencies are:
+Additionally, the front-end dependencies are:
 * vue
 * vue-router
 * axios
 * moment
+
+*****Important Note:**
+In order to most accurately emulate a production environment I opted to consume the Django API in the Vue application.
+As such, both projects must be serving locally in order for the front-end application to function correctly.
+
+By default, the projects are hosted at the following addresses:
+**API:** localhost:8000
+**APP:** localhost:8080/#/
 
 # Architectural Overview
 
