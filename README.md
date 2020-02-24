@@ -28,8 +28,9 @@ In order to most accurately emulate a production environment I opted to consume 
 As such, both projects must be serving locally in order for the front-end application to function correctly.
 
 By default, the projects are hosted at the following addresses:
-**API:** localhost:8000
-**APP:** localhost:8080/#/
+
+**API:** http://localhost:8000
+**APP:** http://localhost:8080/#/
 
 # Architectural Overview
 
