@@ -50,6 +50,8 @@ become untenable in a more complex API. Between the second and third approach, I
 because fixtures are better suited for parsing JSON files generated from database exports and it seemed inelegant to
 modify the provided data to emulate that format.
 
+Filtering by user activity is supported via the query parameter `active=true` or `active=false`.
+
 ## Frontend
 As noted in the Usage Instructions, I decided to consume the Django API in order to retrieve the user data in the
 front-end. This is accomplished using the [Axios HTTP Client](https://github.com/axios/axios) plugin. Because the
