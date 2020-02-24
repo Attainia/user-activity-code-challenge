@@ -14,7 +14,7 @@ def insert_user(apps, schema_editor):
         user_model = User(
             id = entry['id'],
             username = entry['username'],
-            last_login = dateutil.parser.isoparse(entry['last_login']),
+            last_login = dateutil.parser.parse(entry['last_login']),
             login_count = entry['login_count'],
             project_count = entry['project_count']
         )

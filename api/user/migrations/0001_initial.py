@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(primary_key=True, serialize=False)),
                 ('username', models.CharField(max_length=50)),
-                ('last_login', models.DateField()),
+                ('last_login', models.DateTimeField()),
                 ('login_count', models.IntegerField()),
                 ('project_count', models.IntegerField()),
             ],
