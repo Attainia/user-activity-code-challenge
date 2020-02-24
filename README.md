@@ -23,7 +23,7 @@ Additionally, the front-end dependencies are:
 - axios
 - moment
 
-****Important Note*:
+**Important Note**:
 
 In order to most accurately emulate a production environment I opted to consume the Django API in the Vue application.
 As such, both projects must be serving locally in order for the front-end application to function correctly.
