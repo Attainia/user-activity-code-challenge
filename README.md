@@ -6,8 +6,9 @@ This submission for the user activity code challenge can be installed and served
 git clone https://github.com/PatrickJFierro/user-activity-code-challenge
 cd user-activity-code-challenge
 source env/bin/activate
-python api/manage.py runserver&
-npm run --prefix app dev
+cd app
+npm install
+python ../api/manage.py runserver & npm run dev
 ```
 
 # Architectural Overview
