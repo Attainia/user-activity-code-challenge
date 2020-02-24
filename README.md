@@ -11,7 +11,7 @@ npm install
 python ../api/manage.py runserver & npm run dev
 ```
 
-These commands assume that the node package manager is installed. I've included a python virtual environment for ease
+These commands assume that the node package manager is installed. I've also included a python virtual environment for ease
 of use but if you would rather serve the API natively it uses the following packages:
 - Django
 - djangorestframework
