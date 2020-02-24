@@ -84,6 +84,7 @@ td, th {
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
+  user-select: none;
 }
 
 .button:hover {
