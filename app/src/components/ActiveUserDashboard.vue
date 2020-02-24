@@ -61,13 +61,13 @@ h1 {
 table {
   margin: 30px auto;
   border-collapse: collapse;
-  border: 1px solid #ddd;
+  border: 1px solid #DDD;
 }
 
 td, th {
   padding: 5px 15px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #DDD;
 }
 
 .highlighted {
