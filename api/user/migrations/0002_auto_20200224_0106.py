@@ -4,7 +4,6 @@ from django.db import migrations
 from user.models import User
 
 import json
-import dateutil.parser
 
 def insert_user(apps, schema_editor):
     with open('user/data/users.json') as user_file:
@@ -14,7 +13,7 @@ def insert_user(apps, schema_editor):
         user_model = User(
             id = entry['id'],
             username = entry['username'],
-            last_login = dateutil.parser.parse(entry['last_login']),
+            last_login = entry['last_login'],
             login_count = entry['login_count'],
             project_count = entry['project_count']
         )
