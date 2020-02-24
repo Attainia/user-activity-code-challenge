@@ -4,14 +4,14 @@
     <h2>Directory</h2>
     <ul>
       <li>
-        <router-link to="/active-user-dashboard">
+        <a href="localhost:8080/active-user-dashboard">
           Active User Dashboard
-        </router-link>
+        </a>
       </li>
       <li>
-        <router-link to="/inactive-user-dashboard">
+        <a href="localhost:8080/inactive-user-dashboard">
           Inactive User Dashboard
-        </router-link>
+        </a>
       </li>
     </ul>
   </div>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'Directory',
+  name: 'InactiveUserDashboard',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
