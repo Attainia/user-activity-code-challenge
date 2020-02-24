@@ -89,5 +89,4 @@ td, th {
 .button:hover {
   background-color: #DDD;
 }
-
 </style>
