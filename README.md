@@ -23,14 +23,15 @@ Additionally, the front-end dependencies are:
 * axios
 * moment
 
-****Important Note:*
+*__**Important Note:*_____
+
 In order to most accurately emulate a production environment I opted to consume the Django API in the Vue application.
 As such, both projects must be serving locally in order for the front-end application to function correctly.
 
 By default, the projects are hosted at the following addresses:
 
-*API:* http://localhost:8000
-*APP:* http://localhost:8080/#/
+__API:__ http://localhost:8000
+__APP:__ http://localhost:8080/#/
 
 # Architectural Overview
 
