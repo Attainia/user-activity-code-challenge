@@ -1,34 +1,76 @@
 <template>
   <div>
     <h1>Inactive User Dashboard</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Last Login</th>
+        <th>Login Count</th>
+        <th>Project Count</th>
+      </tr>
+      <tr v-for="user in users" :key="user.id" v-bind:class="generateUserHighlightClass(user)">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.last_login | formatDate}}</td>
+        <td>{{user.login_count}}</td>
+        <td>{{user.project_count}}</td>
+      </tr>
+    </table>
+    <button v-on:click="toggleActiveUserHighlight">Highlight Inactive Users</button>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+import moment from 'moment'
+
 export default {
   name: 'InactiveUserDashboard',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      users: [],
+      areActiveUsersHighlighted: false
     }
+  },
+  methods: {
+    toggleActiveUserHighlight: function (event) {
+      this.areActiveUsersHighlighted = !this.areActiveUsersHighlighted
+    },
+    generateUserHighlightClass: function (user) {
+      var isUserActive = user.login_count === 0
+      return isUserActive && this.areActiveUsersHighlighted ? 'highlighted' : ''
+    }
+  },
+  mounted () {
+    axios
+      .get('http://localhost:8000/users')
+      .then(response => (this.users = response.data))
+  },
+  filters: {
+    formatDate: (isoDateTime) => { return moment(isoDateTime).format('MM/DD/YYYY hh:mm') }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1 {
   font-weight: normal;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  border: 1px solid #DDD;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+td, th {
+  padding: 5px 15px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
 }
-a {
-  color: #42b983;
+
+.highlighted {
+  background-color: #FF4600;
 }
 </style>
