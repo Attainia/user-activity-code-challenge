@@ -52,7 +52,7 @@ modify the provided data to emulate that format.
 
 I left the debug setting enabled for easier debugging but would disable it in any production environment. Furthermore,
 filtering by user activity is supported via the query parameter `active=true` or `active=false`. In a project of
-a large scope I would extend this functionality to allow filtering with a numeric range and via other user properties.
+a larger scope I would extend this functionality to allow filtering with a numeric range and via other user properties.
 
 ## Frontend
 As noted in the Usage Instructions, I decided to consume the Django API in order to retrieve the user data in the
