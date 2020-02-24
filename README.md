@@ -37,7 +37,7 @@ __APP:__ http://localhost:8080/#/
 # Architectural Overview
 
 ## Backend
-Because the user data was provided in a raw JSON format, the driving consideration in my view concerned the best
+Because the user data was provided in a raw JSON format, the driving consideration for the back-end concerned the best
 method for incorporating the data into Django's featureset. From my understanding there were three obvious approaches:
 
 1. Parse the JSON using python at the controller level, forgoing any need to translate the user data to a database.
