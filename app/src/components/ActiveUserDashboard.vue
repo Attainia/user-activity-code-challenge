@@ -9,7 +9,7 @@
         <th>Login Count</th>
         <th>Project Count</th>
       </tr>
-      <tr v-for="user in users" :key="user.id">
+      <tr v-for="user in users" :key="user.id" v-bind:class="generateUserHighlightClass(user)">
         <td>{{user.id}}</td>
         <td>{{user.username}}</td>
         <td>{{user.last_login | formatDate}}</td>
@@ -17,6 +17,7 @@
         <td>{{user.project_count}}</td>
       </tr>
     </table>
+    <button v-on:click="toggleActiveUserHighlight">Highlight Active Users</button>
   </div>
 </template>
 
@@ -28,7 +29,17 @@ export default {
   name: 'ActiveUserDashboard',
   data () {
     return {
-      users: []
+      users: [],
+      areActiveUsersHighlighted: false
+    }
+  },
+  methods: {
+    toggleActiveUserHighlight: function (event) {
+      this.areActiveUsersHighlighted = !this.areActiveUsersHighlighted
+    },
+    generateUserHighlightClass: function (user) {
+      var isUserActive = user.login_count > 0
+      return isUserActive && this.areActiveUsersHighlighted ? 'highlighted' : ''
     }
   },
   mounted () {
@@ -48,8 +59,7 @@ h1 {
 }
 
 table {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto;
   border-collapse: collapse;
   border: 1px solid #ddd;
 }
@@ -58,5 +68,9 @@ td, th {
   padding: 5px 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+}
+
+.highlighted {
+  background-color: #00FF00;
 }
 </style>
