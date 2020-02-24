@@ -1,19 +1,6 @@
 <template>
   <div>
-    <h1>User Activity Monitor</h1>
-    <h2>Directory</h2>
-    <ul>
-      <li>
-        <a href="localhost:8080/active-user-dashboard">
-          Active User Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="localhost:8080/inactive-user-dashboard">
-          Inactive User Dashboard
-        </a>
-      </li>
-    </ul>
+    <h1>Inactive User Dashboard</h1>
   </div>
 </template>
 
