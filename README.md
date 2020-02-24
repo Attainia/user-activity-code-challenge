@@ -31,9 +31,12 @@ As such, both projects must be serving locally in order for the front-end applic
 By default, the projects are hosted at the following addresses:
 
 __API:__ http://localhost:8000
+- The REST endpoint for fetching users is http://localhost:8000/users
 
 __APP:__ http://localhost:8080/#/
 
 # Architectural Overview
 
-# Further Considerations
+## Backend
+
+## Frontend
