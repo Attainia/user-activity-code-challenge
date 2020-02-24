@@ -51,3 +51,19 @@ because fixtures are better suited for parsing JSON files generated from databas
 modify the provided data to emulate that format.
 
 ## Frontend
+As noted in the Usage Instructions, I decided to consume the Django API in order to retrieve the user data in the
+front-end. This is accomplished using the [Axios HTTP Client](https://github.com/axios/axios) plugin. Because the
+scope of this project is so small, I hardcoded the API calls in the dashboard components to keep the complexity of
+the front-end project minimal. I would consider this a violation of SRP and DRY in more complex contexts, however,
+and would typically extract these calls into a separate API service.
+
+In a similar vein, the instructions for this project led me to create two separate components for each
+user activity dashboard but this led to a good deal of repeated code between both components. In a more realistic
+setting I would merge these dashboards into a single component and rework the user controls to improve usability by,
+for example, allowing the user to filter by username in addition to highlighting active/inactive users.
+
+One last observation - the instructions vaguely imply an architectural solution which utilizes the API's ability to
+filter out active or inactive users. Since all users must be fetched by the client to populate the table and since
+activity level is inherent to the user data structure (via login\_count), I opted to handle activity measurement in
+the front-end. A slightly different problem which doesn't require all users to be displayed at all times may have pushed
+me to another solution.
