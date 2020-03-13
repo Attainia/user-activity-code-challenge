@@ -1,0 +1,6 @@
+env/
+.vscode/
+AttainiaProject/Attainia_Api/__pycache__/
+AttainiaProject/AttainiaProject/__pycache__/
+AttainiaProject/Attainia_Api/migrations/
+*.pyc
