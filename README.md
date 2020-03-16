@@ -12,13 +12,13 @@ I also use virtualenvwrapper for easier virtual env management: <https://virtual
 Make a new virtual environment:  
   ```mkvirtualenv <INSERT desired environment name here>```  
 Install dependencies:  
-  ```run pip install -r requirements.txt```  
+  ```pip install -r requirements.txt```  
 Seed the sqlite database:  
-  ```run py manage.py loaddata users.json```  
+  ```py manage.py loaddata users.json```  
 Make the migrations:  
-  ```run py manage.py migrate```  
+  ```py manage.py migrate```  
 Run the server:  
-  ```run py manage.py runserver```  
+  ```py manage.py runserver```  
 
 Navigate to <http://localhost:8000/api/v1/users/> to see the users.  
 To get the list of users that have logged on at least once:  
@@ -32,9 +32,9 @@ Open another terminal tab
 From project root, cd into the vue app:  
   ```cd user-activity-app/```  
 Install dependencies:  
-  ```run npm install```  
+  ```npm install```  
 Run the app:  
-  ```run npm run serve``` 
+  ```npm run serve``` 
 
 ### Run the Application
 Navigate to <http://localhost:8080/> to see the application.
