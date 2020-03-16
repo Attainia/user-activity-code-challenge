@@ -14,10 +14,10 @@ Make a new virtual environment:
   ```mkvirtualenv <INSERT desired environment name here>```  
 Install dependencies:  
   ```pip install -r requirements.txt```  
-Seed the sqlite database:  
-  ```py manage.py loaddata users.json```  
 Make the migrations:  
-  ```py manage.py migrate```  
+  ```py manage.py migrate``` 
+Seed the sqlite database:  
+  ```py manage.py loaddata users.json```   
 Run the server:  
   ```py manage.py runserver```  
 
