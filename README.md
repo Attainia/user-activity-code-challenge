@@ -12,7 +12,7 @@ This install depends on pip, make sure you have it by running:
 I also use virtualenvwrapper for easier virtual env management: <https://virtualenvwrapper.readthedocs.io/en/latest/>   
 Make a new virtual environment:  
   ```mkvirtualenv <INSERT desired environment name here>```  
-Install dependencies:  
+From the root director, install dependencies:  
   ```pip install -r requirements.txt```  
 Make the migrations:  
   ```py manage.py migrate```  
