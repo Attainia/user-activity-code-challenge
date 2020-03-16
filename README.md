@@ -3,7 +3,7 @@
 I work on a Windows machine. The instructions should be mostly the same even if you work on a Mac or Linux.  
 On Mac or Linux, replace 'py' with 'python3' or 'python'  
 Clone this repository: 
-```git clone git@github.com:richardswei/attainiaapp.git```
+```git clone git@github.com:richardswei/user-activity-code-challenge.git```
 
 ### Set up the Django REST Framework API
 This install depends on pip, make sure you have it by running:  
