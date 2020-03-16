@@ -15,7 +15,7 @@ Make a new virtual environment:
 Install dependencies:  
   ```pip install -r requirements.txt```  
 Make the migrations:  
-  ```py manage.py migrate``` 
+  ```py manage.py migrate```  
 Seed the sqlite database:  
   ```py manage.py loaddata users.json```   
 Run the server:  
