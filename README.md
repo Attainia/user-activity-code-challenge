@@ -1,4 +1,5 @@
 # Attainia Assessment
+Note: I did not realize I couldn't just make a pull request from another repo (I should have just forked this from the beginning). If you'd like to see the commit history, you can go to <https://github.com/richardswei/attainiaapp> 
 ### Getting Started
 I work on a Windows machine. The instructions should be mostly the same even if you work on a Mac or Linux.  
 On Mac or Linux, replace 'py' with 'python3' or 'python'  
