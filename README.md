@@ -1,5 +1,9 @@
 # vue-example
 
+Implemented as reusable component to reduce repetitive code. Each route defines the CSS to apply and a compute function to determine which users get the highlight class. The component toggles a class on the parent element for performance reasons (smaller DOM update).
+
+Backend is implemented in Node, because I'm not a python (Django) developer.
+
 ## Project setup
 
 ```
