@@ -1,3 +1,29 @@
+Project was completed using django rest and react. Ended up with react in the interest of time as I have lots of familiarity with react and none with vue. 
+I understand if this may hamper my chances but I cannot commit more time right now. 
+
+### To start frontend:
+1. cd frontend
+2. yarn install            
+2. yarn start
+
+### To start backend: (done in python 3.7.2)
+1. cd backend
+2. pip install -r requirements.txt
+3. python manage.py migrate 
+4. python manage.py loaddata users
+5. python manage.py runserver
+
+### Usage
+You can navigate to http://localhost:3000/ to view the table
+For the backend:
+    - http://localhost:8000/users should return all the users
+    - http://localhost:8000/users?login_count_gt=0 should return all users that have logged in
+    - http://localhost:8000/users?login_count=0 shoudl return all users that have no logged in
+
+
+
+===================================================================================================================================================
+
 # User Activity Monitor (Frontend)
 
 ## Resources
