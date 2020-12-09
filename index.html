@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <style>
+            table, th, td {
+                border: 1px black solid;
+                border-collapse: collapse;
+            }
+
+            .red_bg {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div id="user_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Last Login</th>
+                            <th scope="col">Login Count</th>
+                            <th scope="col">Project Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-bind:class="{ red_bg: highlight && user.login_count < 1 }" v-for="user in users">
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.last_login }}</td>
+                            <td>{{ user.login_count }}</td>
+                            <td>{{ user.project_count }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="margin-top:5px;">
+                <button v-on:click="toggleHighlight">Highlight users without logins</button>
+            </div>
+        </div>
+        <script type="module">
+            var users_json = 
+[
+  {"id": 0, "username": "ana", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 0, "project_count": 12 },
+  {"id": 1, "username": "tim", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 23, "project_count": 234 },
+  {"id": 23, "username": "kyle", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 4, "project_count": 2354 },
+  {"id": 34, "username": "alex", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 0, "project_count": 6563 },
+  {"id": 234, "username": "glenn", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 1, "project_count": 3452 },
+  {"id": 633, "username": "cort", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 1000, "project_count": 2345 },
+  {"id": 693, "username": "sean", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 3, "project_count": 8654 },
+  {"id": 623, "username": "violet", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 0, "project_count": 4028 },
+  {"id": 665, "username": "nik", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 0, "project_count": 4428 }
+]
+
+            var app = new Vue({
+              el: '#app',
+              data: {
+                highlight: false,
+                users: users_json
+              },
+              methods: {
+                toggleHighlight: function() {
+                    app.highlight = !app.highlight;
+                }
+              }
+            });
+        </script>
+    </body>
+</html>
