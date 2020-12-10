@@ -40,7 +40,8 @@
                 <button v-on:click="toggleHighlight">Highlight users without logins</button>
             </div>
         </div>
-        <script type="module">
+        <script>
+            // hard-coding rather than try to import around CORS policy
             var users_json = 
 [
   {"id": 0, "username": "ana", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 0, "project_count": 12 },
@@ -52,7 +53,7 @@
   {"id": 693, "username": "sean", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 3, "project_count": 8654 },
   {"id": 623, "username": "violet", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 0, "project_count": 4028 },
   {"id": 665, "username": "nik", "last_login": "2019-08-20T22:15:09.926Z", "login_count": 0, "project_count": 4428 }
-]
+];
 
             var app = new Vue({
               el: '#app',
