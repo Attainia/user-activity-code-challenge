@@ -4,9 +4,10 @@ from . import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
+router.register(r'users-all', views.UserViewSet)
+router.register(r'users-inactive', views.InactiveUserViewSet)
+router.register(r'users-active', views.ActiveUserViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('hello', views.index, name='index'),
 ]
