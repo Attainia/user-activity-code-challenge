@@ -35,9 +35,9 @@ The Django application is under the `testapp/` directory. To run the application
 
 1. Install Python 3.x, [Django 3.1](https://docs.djangoproject.com/en/3.1/topics/install/#installing-official-release), and the [Django REST framework](https://www.django-rest-framework.org/#installation)
 2. From the `testapp/` directory, run the command `python manage.py runserver` to start a local instance on port 8000.
-3. The API is available at [localhost:8000/api](localhost:8000/api)
+3. The API is available at [localhost:8000/api](http://localhost:8000/api)
 
 The desired result sets can be found at the following paths
-- [localhost:8000/api/users-all?format=json](localhost:8000/api/users-all?format=json) 
-- [localhost:8000/api/users-inactive?format=json](localhost:8000/api/users-inactive?format=json) 
-- [localhost:8000/api/users-active?format=json](localhost:8000/api/users-active?format=json)
+- [localhost:8000/api/users-all?format=json](http://localhost:8000/api/users-all?format=json) 
+- [localhost:8000/api/users-inactive?format=json](http://localhost:8000/api/users-inactive?format=json) 
+- [localhost:8000/api/users-active?format=json](http://localhost:8000/api/users-active?format=json)
